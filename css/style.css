@@ -1,0 +1,434 @@
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #000;
+	height: 100%;
+}
+
+.small {
+	font-size: 11px;
+}
+
+.small a:link,a:hover,a:active a:visted {
+	color: #000;
+}
+
+#page_overlay {
+	position: relative;
+	z-index: 5;
+}
+
+a:link,a:hover,a:active {
+	color: #fff;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #fff;
+}
+
+/*
+img.wm {
+    position: fixed;
+	width: 301px;
+	height: 246px;
+	bottom: 8px;
+	right: 8px;
+}
+	
+@media only screen and (min-width: 0px) and (max-width: 640px) {
+	img.wm { 
+	width: 151px;
+	height: 123px;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	}
+}	
+
+#watermark{
+position: fixed;
+z-index: 3;
+width: 301px;
+height: 246px;
+bottom: 8px;
+right: 8px;
+}
+*/
+#watermark {
+	background: url(/images/watermark.png) no-repeat right bottom;
+	position: fixed;
+	z-index: 4;
+	width: 301px;
+	height: 246px;
+	bottom: 8px;
+	right: 8px;
+}
+
+@media only screen and min-width 0px and max-width 768px {
+	#watermark {
+		background: url(/images/watermark-small.png) no-repeat right bottom !important;
+		position: fixed;
+		z-index: 4;
+		bottom: 5px;
+		right: 5px;
+	}
+
+}
+
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	background: url(/images/backgrounds/image1.jpg) no-repeat center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: 100%;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#bg2 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	-webkit-background-size: cover;
+	-moz-background-size: 100%;
+	-o-background-size: cover;
+	background-size: cover;
+	background: url(/images/backgrounds/image2.jpg) no-repeat center fixed;
+}
+
+#bg_grid {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+/*background: url(../images/grid.png) repeat;*/
+	z-index: 2;
+}
+
+#sidebar-wrapper {
+	position: fixed;
+	min-height: 100%;
+	height: 100%;
+/*width: 635px;*/
+}
+
+#sidebar {
+	float: left;
+	min-height: 100%;
+	height: 100%;
+	width: 480px;
+	background: rgba(49,44,40,.80);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80312c28',endColorstr='#80312c28');
+/* IE */
+	margin-left: -470px;
+	overflow-y: auto;
+}
+
+.sidebar-content {
+	color: #FFF;
+	display: none;
+	padding: 20px;
+}
+
+.content-header {
+	width: 100%;
+	float: left;
+	font-family: Oswald, Arial, sans-serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid #6A6A6A;
+	font-weight: 400;
+	padding-bottom: 10px;
+}
+
+.content-hr {
+	border-bottom: 1px solid #6A6A6A;
+	width: 100%;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.content-header h1 {
+	float: left;
+	font-weight: 400;
+}
+
+.content-header h2 {
+	margin-top: 24px;
+	float: right;
+	font-weight: 300;
+	font-size: .8em;
+	line-height: 1em;
+}
+
+.content-body {
+	float: left;
+	margin-top: 20px;
+	width: 100%;
+	font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.accordion-inner {
+	font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.2em;
+	line-height: 2em;
+}
+
+.content-body img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.content-body iframe {
+	background: #FFF;
+	padding: 7px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.content-body p {
+	display: block;
+	font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+/* Begin Justin's custom CSS additions w00t */
+p.dropcap:first-letter {
+	font-size: 44px;
+	float: left;
+	color: #ffd6ee;
+	line-height: 25px;
+	padding-top: 3px;
+	padding-right: 3px;
+}
+
+hr.dots {
+	height: 0;
+	border-style: dotted;
+	border-width: 1px 0 0;
+	border-color: #fff;
+}
+
+h3.story {
+	line-height: 40px;
+	color: #ffd6ee;
+}
+
+/* End Justin's custom CSS additions w00t */
+#nav {
+	padding-top: 10px;
+	margin-top: 100px;
+	padding-bottom: 10px;
+	float: left;
+	height: auto;
+	width: 145px;
+	background: rgba(49,44,40,.30);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80312c28',endColorstr='#80312c28');
+/* IE */
+}
+
+.nav-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	padding-right: 10px;
+}
+
+.nav-list li {
+	margin: 0;
+	padding-left: 10px;
+	display: block;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	color: #FFF;
+	text-shadow: 1px 1px 2px #000;
+	text-transform: uppercase;
+	font-family: Oswald, Arial, sans-serif;
+	font-size: 1.3em;
+	line-height: 2em;
+	cursor: pointer;
+}
+
+.nav-list li:hover {
+	background: rgba(0,0,0,.40);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#40000000',endColorstr='#40000000');
+/* IE */
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.active {
+	background: rgba(0,0,0,.40);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#40000000',endColorstr='#40000000');
+/* IE */
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.guest {
+	display: block;
+	color: #000;
+	border-bottom: #6A6A6A 1px solid;
+	margin-bottom: 20px;
+}
+
+.gname {
+	display: block;
+	font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 24px;
+	color: #ffd6ee;
+	margin-bottom: 10px;
+}
+
+.control-group {
+	color: #FFF;
+	background: rgba(0,0,0,.40);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#40000000',endColorstr='#40000000');
+/* IE */
+	padding: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.accordion-heading {
+	color: #FFF;
+	background: rgba(0,0,0,.40);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#40000000',endColorstr='#40000000');
+/* IE */
+	padding: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.accordion-group .name {
+	padding: 0;
+	margin: 0;
+	font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFF;
+}
+
+.accordion-group .title {
+	font-size: 11px;
+	line-height: 15px;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-family: Oswald, Arial, sans-serif;
+	color: #ffd6ee;
+}
+
+.accordion-group p {
+	margin-top: 5px;
+	display: block;
+	font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	color: #FFF;
+}
+
+.accordion-group img {
+	float: left;
+	border: 3px solid #FFF;
+	margin-right: 8px;
+	margin-bottom: 1px;
+}
+
+.accordion-group a:link,.accordion-group a:hover,.accordion-group a:visited {
+	text-align: center;
+	vertical-align: middle;
+	padding: 0;
+	padding-top: 1px;
+	padding-left: 1px;
+	line-height: 20px;
+	font-size: 20px;
+	color: #FFF;
+	text-decoration: none;
+	background-color: #333;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	width: 24px;
+	height: 24px;
+}
+
+.accordion-group a:hover {
+	background-color: #000;
+	color: #ffd6ee;
+}
+
+.content-body .event span,.content-body .event div {
+	display: block;
+}
+
+.event-date {
+	font-size: 20px;
+	color: #ffd6ee;
+	margin-bottom: 20px;
+	display: block;
+	font-weight: 700;
+}
+
+.event-time {
+	font-family: Oswald, Arial, sans-serif;
+	margin-top: 5px;
+	margin-bottom: 3px;
+	display: block;
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.event-type {
+	display: block;
+	margin-bottom: 3px;
+	font-size: 14px;
+}
+
+.event-address {
+	display: block;
+	margin-top: 15px;
+}
+
+.map {
+	display: block;
+	font-size: 14px;
+}
+
+.event-parking {
+	display: block;
+	margin-top: 5px;
+}
+
+.event-details {
+	display: block;
+}
+
+#adguest {
+	display: block;
+	margin-bottom: 10px;
+	font-family: Oswald, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	padding-bottom: 10px;
+}
